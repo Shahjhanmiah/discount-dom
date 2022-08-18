@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<style>
+    #price{
+        background-color: orange;
+       
+        border-radius: 20px;
+        font-size: large;
+        font-weight: white;
+        text-align: center;
+        color: aliceblue;
+    }
+    #discount{
+        background-color:rgb(79, 39, 79);
+        border-radius: 20px;
+        font-size: large;
+        font-weight: white;
+        text-align: center;
+        color: aliceblue;
+        
+
+    }
+    .container{
+        text-align: center;
+        justify-items: center;
+        margin-right: 10px;
+    
+    }
+    #function{
+        background-color:goldenrod;
+        border-radius: 20px;
+        font-size: large;
+        font-weight: white;
+        text-align: center;
+        color: aliceblue;
+
+    
+    }
+    #total{
+        background-color:green;
+        border-radius: 20px;
+        font-size: large;
+        font-weight: white;
+        text-align: center;
+        color: aliceblue;
+
+    }
+    </style>
+    
+<body>
+    <!---->
+    <div class="container">
+        <h1>Price</h1>
+        <input id="price" >
+    <br><br>
+    <h2>Discounts</h2>
+    <input id="discount">
+    <br><br>
+    <button onclick="getPrice()" id="function">
+        <!----->
+
+        
+Get total
+</button>
+    <br><br>
+    <input readonly id="total">
+    </div>
+    <script>
+        getPrice = function() {
+            var numVal1 = Number(document.getElementById("price").value);
+            var numVal2 = Number(document.getElementById("discount").value) / 100;
+            var totalValue = numVal1 - (numVal1 * numVal2)
+            document.getElementById("total").value = totalValue.toFixed(2);
+        }
+    </script>
+    
+</body>
+</html>
